@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/*Importando fontes do fontes google*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10+Charted&display=swap');
+
+/* Utilizando fonte baixada no pc. utilizando font-face*/
+@font-face{
+    font-family:'android';
+    src:url('fontes/idroid.otf') format(opentype);
+}
+/*Utilizando :root como var globais para deixar fontes e cores do projeto */
+:root{
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --cornav:#226740;
+    --cor-background1:#53BF83;
+    --cor-background2:#74D39E;
+
+    --font-padrão: arial,Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android:'android', cursive;
+}
+
+/*Configuração para deixar os elementos do HTML sem margin e paddin*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--font-padrão);
+}
+
+header{
+   background-color: var(--cor4);
+    height: 143px;
+}
+
+header >h1{
+    font-family: var(--fonte-android);
+    color: white;
+    text-align: center;
+}
+
+header >h3{
+    font-family: var(--fonte-destaque);
+    color: white;
+    text-align: center;
+    margin-top: 18px;
+}
+
+nav{
+    background-color: var(--cornav);
+}
+
+nav >a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav >a:hover{
+    background-color: darkgreen;
+    color: chocolate;
+    font-size: large;
+}
+ /* Ajustando responsividade do conteudo do site*/
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(108, 103, 103);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main >h1{
+    font-family: var(--fonte-android);
+}
+
+main >p{
+    color: black;
+    font-family: var(--font-padrão);
+}
+
+/* Responsividade da imagem*/
+main img{
+    width: 100%;
+   
+}
+
+main img.pequena{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+/*responsividade video*/
+iframe{
+    width: 100%;
+}
+
+aside{
+    background-color: var(--cor4);
+    margin: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+}
